@@ -1,0 +1,27 @@
+theme = "l"
+baseURL = "https://wm65045.com"
+title = "wm65045.com"
+languageCode = "zh-CN"
+enableEmoji = true 
+copyright = "庐山烟雨浙江潮"
+description = "wm65045"
+
+[taxonomies]
+  tag = "tags"
+
+[params]
+  titleEmoji = ":earth_asia:"
+  # change this!
+
+[Permalinks]
+  post = "post/:slug"
+
+[[params.menu]]
+  name = "分类"
+  url = "tags/"
+
+[[params.menu]]
+  name = "归档"
+  url = "post/"
+
+ 

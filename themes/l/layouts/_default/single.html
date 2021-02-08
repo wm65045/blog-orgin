@@ -1,0 +1,67 @@
+<!-- 控制单个页面模板 ---例如单个生成的about.md页面 ---也包括.../post/文件夹下的文档
+
+  <a href="{{ .Site.BaseURL  }}" class="b bw1 bb pb1 no-underline black">{{ .Site.Title  }}</a>
+  <span class="b">/ {{ lower .Title }}</span>
+
+  下面为页脚 左下角
+  <section id="main" class="mt5">
+    <h1 itemprop="name" id="title">{{ .Title }}</h1>
+    <article itemprop="articleBody" id="content" class="w-90 lh-copy">{{ .Content }}</article>
+  </section>
+
+  <span class="f6 pink db dib-ns child"><em>本文最近一次修改日期&nbsp&nbsp{{ .Lastmod.Format "January 2, 2006" }}</em></span>
+
+
+<html>
+{{ partial "header.html" . }}
+<body  
+  lang="{{ .Site.LanguageCode }}"  class="sans-serif w-90 w-60-ns center center-ns mv2 mv5-ns"  itemscope  itemtype="http://schema.org/Article">
+  
+  {{ $baseurl := .Site.BaseURL }}
+  <span class="b">/</span>
+  <a href="{{ .Site.BaseURL  }}" class="b bb bw1 pb1 no-underline black">{{ .Site.Title }}</a>
+  <span class="b">/ {{ lower .Title }}</span>
+
+  <section id="main" class="mt5">
+    <h1 itemprop="name" id="title">{{ .Title }}</h1>
+    <article itemprop="articleBody" id="content" class="w-90 lh-copy">{{ .Content }}</article>
+  </section>
+  <span class="f6 pink db dib-ns child">最近一次修改&nbsp&nbsp<em>{{ .Lastmod.Format "January 2 2006" }}</em></span>
+  {{ partial "footer.html" . }}
+
+</body>
+</html>
+
+  <a href="/tags" class="b bw1 bb pb1 no-underline black">tags</a>
+  <span class="b">/</span>
+  <span class="b pb1 no-underline black">{{ .Title | lower }}</span>
+-->
+
+<html>
+{{ partial "header.html" . }}
+<body  
+  lang="{{ .Site.LanguageCode }}"  class="sans-serif w-90 w-60-ns center center-ns mv2 mv5-ns"  itemscope  itemtype="http://schema.org/Article">
+  
+  {{ $baseurl := .Site.BaseURL }}
+  <span class="b">/</span>
+  <a href="/" class="b bb bw1 pb1 no-underline black">{{ .Site.Title }}</a>
+  <span class="b"><</span>
+  <a href="/tags" class="b bw1 bb pb1 no-underline black">tags</a>
+  <span class="b">&nbsp</span>
+  <a href="/post" class="b bw1 bb pb1 no-underline red">post</a>
+  <span class="b">></span>
+
+  <span class="b">{{ lower .Title }}</span>
+
+  <section id="main" class="mt5">
+    <h1 itemprop="name" id="title">{{ .Title }}</h1>
+    <span class="f5 pink db dib-ns child">&nbsp{{ .Lastmod.Format "January 2 2006" }}</span>
+    <article itemprop="articleBody" id="content" class="w-90 lh-copy">{{ .Content }}</article>
+  </section>
+
+  <span class="f6 pink db dib-ns child"><em>最近修改&nbsp&nbsp{{ .Lastmod.Format "January 2 2006" }}</em></span>
+
+  {{ partial "footer.html" . }}
+
+</body>
+</html>

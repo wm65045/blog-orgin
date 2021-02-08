@@ -1,0 +1,38 @@
+<!--
+  页面 图标
+-->
+<!DOCTYPE html>
+<html
+  class=""
+  lang="{{ .Site.LanguageCode }}"
+  prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#"
+>
+  <head>
+    <meta charset="utf-8" />
+    
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+     <!-- 
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    -->
+         <!-- Favicon, Icons, Web App -->
+   <!--  
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="mask-icon" href="icons/safari-pinned-tab.svg" color="pink" />
+    <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png" />
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="{{ .Site.Title }}" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="application-name" content="{{ .Site.Title }}" />
+    
+-->
+    {{ partial "meta.html" . }}
+
+    <title>{{ .Title }}</title>
+    <link rel="canonical" href="{{ .Permalink }}" />
+
+    {{ partial "scripts.html" . }}
+ 
+  </head>
+
